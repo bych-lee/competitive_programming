@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc256/tasks/abc256_e
+
 N = int(input())
 X = list(map(int, input().split()))
 C = list(map(int, input().split()))
