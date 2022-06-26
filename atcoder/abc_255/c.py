@@ -1,3 +1,5 @@
+# https://atcoder.jp/contests/abc255/tasks/abc255_c
+
 X, A, D, N = map(int, input().split())
 
 if D == 0:
