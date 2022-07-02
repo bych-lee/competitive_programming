@@ -1,0 +1,45 @@
+N = int(input())
+C = list(map(int, input().split(" ")))
+
+#C = [(i+1, c) for (i, c) in enumerate(C)]
+#C.sort(key=lambda x: x[1])
+
+#D = []
+#d = C[0]
+#for c in C[1:]:
+#    if c[1] != d[1]:
+#        D.append(d)
+#    d = c
+#D.append(d)
+
+#E = []
+#while N >= D[0][1]:
+#    E.append(D[0])
+#    N -= D[0][1]
+
+D = sorted(set(C))
+
+E = []
+while N >= D[0]:
+    E.append(D[0])
+    N -= D[0]
+
+for (i, e) in enumerate(E):
+    for d in D[1:]:
+        if N >= d - e:
+            N -= d - e
+            e = d
+    E[i] = e
+
+F = [(i+1, c) for (i, c) in enumerate(C)]
+F.sort(key=lambda x: x[1])
+
+G = {}
+for (j, f) in F:
+    G[f] = j
+
+x = 0
+for e in E:
+    x = 10*x + G[e]
+
+print(x)
