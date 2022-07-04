@@ -1,0 +1,7 @@
+fully understand the problem
+determine what data structure to use (1d/2d array, stack/queue, tree/graph)
+sort the data if needed
+
+1. define the search space
+2. reduce the search space
+3. apply a search algorithm
